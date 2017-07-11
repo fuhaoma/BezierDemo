@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mfh.com.bezierdemo.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/basic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="MyClick"
+            android:text="基础" />
+
+        <TextView
+            android:id="@+id/advance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="MyClick"
+            android:text="进阶" />
+
+        <TextView
+            android:id="@+id/expert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="MyClick"
+            android:text="高级" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <mfh.com.bezierdemo.widget.ExpertView
+            android:id="@+id/expertview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <mfh.com.bezierdemo.widget.AdvanceView
+            android:id="@+id/advanceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <mfh.com.bezierdemo.widget.BasicBezierView
+            android:id="@+id/basicview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>
